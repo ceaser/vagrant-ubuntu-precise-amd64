@@ -1,5 +1,4 @@
 source :rubygems
 
-gem 'vagrant'
-gem 'veewee', '0.3.0.beta1'
+gem 'veewee', :git => "https://github.com/jedi4ever/veewee.git"
 
