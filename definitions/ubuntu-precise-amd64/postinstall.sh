@@ -8,7 +8,7 @@ date > /etc/vagrant_box_build_time
 apt-get -y update
 apt-get -y upgrade
 apt-get -y install linux-headers-$(uname -r) build-essential
-apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
+apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev libyaml-dev
 apt-get -y install vim
 
 # Installing the virtualbox guest additions
@@ -52,6 +52,7 @@ cd ..
 rm -rf rubygems-1.8.24
 
 # Installing chef & Puppet
+/opt/ruby/bin/gem install ruby-shadow --no-ri --no-rdoc
 /opt/ruby/bin/gem install chef --no-ri --no-rdoc
 /opt/ruby/bin/gem install puppet --no-ri --no-rdoc
 
